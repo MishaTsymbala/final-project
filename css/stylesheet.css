@@ -1,0 +1,70 @@
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background-image: url(../img/header.png);
+    width: 1500px;
+    height: 700px;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background: #336ee6;
+    border-radius: 0px;
+    }
+    
+.menu {
+    margin: 0px;
+}
+    
+.menu li {
+    width: 150px;
+    float: left;
+    position: relative;
+    left: 250px;
+    list-style-type:none;
+}
+.menu li ul {
+    display: none;
+    position: absolute;
+    top: 19px;
+}
+    
+.menu li > ul {
+    top:auto;
+    left:auto;
+}
+
+.menu li a {
+    color: #e1e1e1;
+    font-family: calibri;
+    display: block;
+    border-radius: 6px;
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+    text-decoration:none;
+}
+    
+.menu li a:hover {
+    background: #1b3e5c;
+    color: #2fd7ed;
+}
+.clear {
+    clear: both;
+}
+
+h2 {
+   text-align: center;
+}
+
+article {
+    background-image: url(../img/we-make-services.png);
+    width: 1500px;
+    height: 578px;
+    background-repeat: no-repeat;
+}

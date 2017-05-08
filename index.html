@@ -13,37 +13,47 @@
               <li><a href="#">HOME</a></li>
               <li><a href="#services">SERVICES</a></li>
               <li><a href="#about">ABOUT</a></li>
-              <li><a href="#">PORTFOLIO</a></li>
-              <li><a href="#">BLOG</a></li>
+              <li><a href="#portfolio">PORTFOLIO</a></li>
+              <li><a href="#blog">BLOG</a></li>
               <li><a href="#contact-us">CONTACT US</a></li>
           </ul>
          </nav>
      </header>
+     <main>
+        <section>
         <h2 id="services">SERVICES</h2>
         <img src="img/psd-html-banner.png" alt="psd2htmlbanner">
+        <ul>
+            <li>Landing page</li>
+            <li>Business card</li>
+            <li>Personal website</li>
+        </ul>
+        </section>
         <article>
-            <h3>dahdb</h3>
+                        <h3>empty heading</h3>
         </article>
-        
-        <footer>
-        <h2 id="contact-us">CONTACT US</h2>
-        <div id="container">
-        <form id="contacts" method="post" action="https://formspree.io/mishatsumbala@gmail.com">
-            <label for="name-form"></label>
-            <input id="name-form" type="text" name="name" placeholder="Your Name" required>
-            <br>
-            <label for="email-form"></label>
-            <input id="email-form" type="email" name="email"  placeholder="Your Mail" required>
-            <br>
-            <label for="subject-form"></label>
-            <input id="subject-form" type="text" name="name" placeholder="Subject" required>
-            <br>
-            <textarea name="comment" cols="50" rows="6" wrap="hard" placeholder="Enter message here..."></textarea>
-            <p>blablabla</p>
-            <p>blablabla</p>
-            <p>blablabla</p>
-        </form>
-         </div>
+        <section>
+          <h2 id="about">ABOUT</h2>
+        </section>
+         <section>
+          <h2 id="portfolio">PORTFOLIO</h2>
+        </section>
+         <section>
+          <h2 id="blog">BLOG</h2>
+        </section>
+        </main>
+     <footer>
+      <h2 id="contact-us">CONTACT US</h2>
+          <form id="contacts" method="post" action="https://formspree.io/mishatsumbala@gmail.com">
+                <input type="text" class="form-input" name="name" placeholder="Your Name" required>
+                <input type="email" class="form-input" name="email"  placeholder="Your Mail" required>
+                <input type="text" class="form-input" name="name" placeholder="Subject" required>
+                <textarea name="comment" cols="50" class="form-input" rows="6" wrap="hard" placeholder="Enter message here..."></textarea>
+                <input id="send-button" type="submit" value="Send">
+            </form>
+            <div>
+          <p>social media</p>
+          </div>
          </footer>
     </body>
 </html>

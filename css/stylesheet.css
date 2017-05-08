@@ -23,6 +23,13 @@ nav {
     background-size: cover;
 }
     
+    
+#header-div {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    font-family: calibri;
+}
 .menu {
     margin: 0px;
 }
@@ -65,6 +72,18 @@ nav {
     clear: both;
 }
 
+#service-images {
+    height: 24em;
+    background-color: #324651;
+}
+
+#service-images img {
+    border: 2px solid #ffe500;
+    padding: 0px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
 h2 {
    text-align: center;
    color: #ffe500;
@@ -92,7 +111,7 @@ article {
     background-color: #324651;
 }
 
-#blog {
+#news {
     width: 100%;
     height: 36.125em;
     background-color: #324651;
@@ -101,6 +120,7 @@ article {
 footer {
     background-color: #324651;
 }
+
 form {
     max-width: 420px;
     margin: 50px auto;
@@ -124,7 +144,7 @@ form {
 }
 
 .form-input:focus { 
-    border:2px solid #1E90FF; 
+    border:2px solid #1e90ff; 
 }
 
 textarea {
@@ -134,7 +154,7 @@ textarea {
 
 #send-button {
     width: 100%;
-    background-color: #1E90FF;
+    background-color: #1e90ff;
     border-radius:5px;
     border: 0;
     cursor: pointer;

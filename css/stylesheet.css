@@ -174,7 +174,7 @@ form {
     border-radius: 5px;
     line-height: 22px;
     background-color: transparent;
-    border:2px solid #ffe500;
+    border:1px solid #ffe500;
     transition: all 0.3s;
     padding: 13px;
     margin-bottom: 15px;
@@ -188,8 +188,8 @@ form {
 }
 
 textarea {
-  height: 150px;
-  line-height: 150%;
+    height: 150px;
+    line-height: 150%;
 }
 
 #send-button {
@@ -210,3 +210,45 @@ textarea {
 #send-button:hover {
     background-color: #ffe500;
 }
+
+.social-media {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.social-media h3 {
+    text-align: center;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    color: white;
+    border: 1px solid #ffe500;
+    border-radius: 10px;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-skype {
+    background: #00aff0;
+    color: white;
+}
+

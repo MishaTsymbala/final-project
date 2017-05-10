@@ -1,6 +1,7 @@
 body {
     padding: 0px;
-    margin: 0px;
+    max-width: 1920px;
+    margin: 0px auto;
 }
 
 header {

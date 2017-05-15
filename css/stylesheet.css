@@ -1,7 +1,7 @@
 body {
-    padding: 0px;
+    padding: 0;
     max-width: 1920px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 header {
@@ -36,10 +36,6 @@ nav {
     font-family: calibri;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-}
 .menu {
     margin: 0px;
 }
@@ -82,6 +78,11 @@ main {
     clear: both;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 #service-images {
     height: 24em;
     background-color: #324651;
@@ -110,8 +111,8 @@ h2 {
 }
 
 #about {
-    width: 100%;
-    height: 36.125em;
+    /*width: 100%;
+    height: 36.125em;*/
     background-color: #324651;
 }
 

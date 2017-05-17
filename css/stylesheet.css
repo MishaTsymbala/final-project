@@ -15,19 +15,9 @@ header {
 }
 
 img {
- max-width: 100%;
- height: auto;
+    max-width: 100%;
+    height: auto;
 }
-
-
-nav {
-    width: 100%;
-    height: 50px;
-    background: #336ee6;
-    border-radius: 0px;
-    background-size: cover;
-}
-    
     
 #header-div {
     color: white;
@@ -35,43 +25,33 @@ nav {
     font-size: 20px;
     font-family: calibri;
 }
-
-.menu {
-    margin: 0px;
-}
-    
-.menu li {
-    width: 150px;
-    float: left;
-    position: relative;
-    left: 250px;
-    list-style-type:none;
-}
-.menu li ul {
-    display: none;
-    position: absolute;
-    top: 19px;
-}
-    
-.menu li > ul {
-    top:auto;
-    left:auto;
+nav{
+  display: flex;
+  width:99%;
+  border:1px solid #007ac9;
+  border-radius:4px;
+  margin:0 auto;
 }
 
-.menu li a {
-    color: #e1e1e1;
-    font-family: calibri;
-    display: block;
-    border-radius: 6px;
-    text-align: center;
-    padding: 15px;
-    margin: 0;
-    text-decoration:none;
+nav > a{
+  font-family:Helvetica,Arial,sans-serif;
+  font-weight:bold;
+  text-decoration:none;
+  padding:10px;
+  color:white;
+  flex: 1 1 auto;
+  text-align:center;
 }
-    
-.menu li a:hover {
-    background: #1b3e5c;
-    color: #2fd7ed;
+
+nav > a:hover{
+  background:#007ac9;
+  color:yellow;
+}
+
+@media screen and (min-width: 0px) and (max-width: 640px) {
+nav{
+    -webkit-flex-flow:column;
+  }
 }
 
 .clear {
@@ -136,8 +116,8 @@ h2 {
 }
 
 .news-box article {
-    width: 16%;
     float: left;
+    width: 16%;
     margin: 0px 2%;
     border: 1px solid;
 }
@@ -183,6 +163,9 @@ h2 {
 
 footer {
     background-color: #324651;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 form {
@@ -239,6 +222,7 @@ textarea {
 
 .social-media {
     background-color: white;
+    padding-top: 20px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
@@ -246,6 +230,7 @@ textarea {
 
 h3 {
     text-align: center;
+    color: white;
 }
 
 .fa {

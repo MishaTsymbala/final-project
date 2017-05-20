@@ -14,6 +14,41 @@ $(function() {
     });
 });
 
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();   
+$(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+});
+
+$('.btn').click(function() {
+    $('body, html').animate({
+        'scrollTop': 0
+    }, 1000)
+});
+
+$('.btn').click(function() {
+    $('body, html').animate({
+        'scrollTop': 0
+    }, 1000)
+});
+
+$(window).scroll(function() {
+
+    if ($(window).scrollTop() > 200) {
+        if ($('.btn').hasClass('slideOutDown')) {
+            $('.btn').removeClass('slideOutDown');
+        }
+
+        $('.btn').addClass('active animated slideInUp');
+    }
+    else {
+        if ($('.btn').hasClass('active animated slideInUp')) {
+
+            $('.btn').addClass('animated slideOutDown');
+            setTimeout(function() {
+                $('.btn').removeClass('slideInUp');
+            }, 50);
+
+        }
+        $('.btn').removeClass('active animated bounceInLeft');
+
+    }
 });

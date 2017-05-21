@@ -1,7 +1,16 @@
 (function() {
   var MutationObserver, Util, WeakMap, getComputedStyle, getComputedStyleRX,
-    bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+    bind = function(fn, me) {
+      return function() {
+        return fn.apply(me, arguments);
+      };
+    },
+    indexOf = [].indexOf || function(item) {
+      for (var i = 0, l = this.length; i < l; i++) {
+        if (i in this && this[i] === item) return i;
+      }
+      return -1;
+    };
 
   Util = (function() {
     function Util() {}
@@ -35,10 +44,12 @@
       if (document.createEvent != null) {
         customEvent = document.createEvent('CustomEvent');
         customEvent.initCustomEvent(event, bubble, cancel, detail);
-      } else if (document.createEventObject != null) {
+      }
+      else if (document.createEventObject != null) {
         customEvent = document.createEventObject();
         customEvent.eventType = event;
-      } else {
+      }
+      else {
         customEvent.eventName = event;
       }
       return customEvent;
@@ -47,9 +58,11 @@
     Util.prototype.emitEvent = function(elem, event) {
       if (elem.dispatchEvent != null) {
         return elem.dispatchEvent(event);
-      } else if (event in (elem != null)) {
+      }
+      else if (event in (elem != null)) {
         return elem[event]();
-      } else if (("on" + event) in (elem != null)) {
+      }
+      else if (("on" + event) in (elem != null)) {
         return elem["on" + event]();
       }
     };
@@ -57,9 +70,11 @@
     Util.prototype.addEvent = function(elem, event, fn) {
       if (elem.addEventListener != null) {
         return elem.addEventListener(event, fn, false);
-      } else if (elem.attachEvent != null) {
+      }
+      else if (elem.attachEvent != null) {
         return elem.attachEvent("on" + event, fn);
-      } else {
+      }
+      else {
         return elem[event] = fn;
       }
     };
@@ -67,9 +82,11 @@
     Util.prototype.removeEvent = function(elem, event, fn) {
       if (elem.removeEventListener != null) {
         return elem.removeEventListener(event, fn, false);
-      } else if (elem.detachEvent != null) {
+      }
+      else if (elem.detachEvent != null) {
         return elem.detachEvent("on" + event, fn);
-      } else {
+      }
+      else {
         return delete elem[event];
       }
     };
@@ -77,7 +94,8 @@
     Util.prototype.innerHeight = function() {
       if ('innerHeight' in window) {
         return window.innerHeight;
-      } else {
+      }
+      else {
         return document.documentElement.clientHeight;
       }
     };
@@ -190,7 +208,8 @@
       this.element = window.document.documentElement;
       if ((ref = document.readyState) === "interactive" || ref === "complete") {
         this.start();
-      } else {
+      }
+      else {
         this.util().addEvent(document, 'DOMContentLoaded', this.start);
       }
       return this.finished = [];
@@ -222,7 +241,8 @@
       if (this.boxes.length) {
         if (this.disabled()) {
           this.resetStyle();
-        } else {
+        }
+        else {
           ref = this.boxes;
           for (j = 0, len = ref.length; j < len; j++) {
             box = ref[j];
@@ -295,11 +315,13 @@
           this.all.push(box);
           if (this.stopped || this.disabled()) {
             this.resetStyle();
-          } else {
+          }
+          else {
             this.applyStyle(box, true);
           }
           results.push(this.scrolled = true);
-        } else {
+        }
+        else {
           results.push(void 0);
         }
       }
@@ -337,7 +359,8 @@
         return function(callback) {
           return window.requestAnimationFrame(callback);
         };
-      } else {
+      }
+      else {
         return function(callback) {
           return callback();
         };
@@ -427,12 +450,14 @@
       var animationName, error;
       try {
         animationName = this.vendorCSS(box, 'animation-name').cssText;
-      } catch (error) {
+      }
+      catch (error) {
         animationName = getComputedStyle(box).getPropertyValue('animation-name');
       }
       if (animationName === 'none') {
         return '';
-      } else {
+      }
+      else {
         return animationName;
       }
     };

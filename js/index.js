@@ -48,7 +48,7 @@ $(window).scroll(function() {
             }, 50);
 
         }
-        $('.btn').removeClass('active animated bounceInLeft');
+        // $('.btn').removeClass('active animated bounceInLeft');
 
     }
 });

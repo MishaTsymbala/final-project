@@ -21,13 +21,7 @@ $(document).ready(function() {
 $('.btn').click(function() {
     $('body, html').animate({
         'scrollTop': 0
-    }, 1000)
-});
-
-$('.btn').click(function() {
-    $('body, html').animate({
-        'scrollTop': 0
-    }, 1000)
+    }, 1000);
 });
 
 $(window).scroll(function() {

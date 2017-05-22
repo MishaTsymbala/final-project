@@ -25,12 +25,10 @@ $('.btn').click(function() {
 });
 
 $(window).scroll(function() {
-
     if ($(window).scrollTop() > 200) {
         if ($('.btn').hasClass('slideOutDown')) {
             $('.btn').removeClass('slideOutDown');
         }
-
         $('.btn').addClass('active animated slideInUp');
     }
     else {
@@ -40,9 +38,7 @@ $(window).scroll(function() {
             setTimeout(function() {
                 $('.btn').removeClass('slideInUp');
             }, 50);
-
         }
         // $('.btn').removeClass('active animated bounceInLeft');
-
     }
 });
